@@ -1,6 +1,68 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #111;
+  justify-content: center;
+  align-items: center;
+}
+
+section div:nth-child(1) {
+  background-image: url(../img/left_2.jpg);
+}
+section div:nth-child(2) {
+  background-image: url(../img/left_1.jpg);
+}
+section div:nth-child(3) {
+  background-image: url(../img/center.jpg);
+}
+section div:nth-child(4) {
+  background-image: url(../img/right_1.jpg);
+}
+section div:nth-child(5) {
+  background-image: url(../img/right_2.jpg);
+}
+body section {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+section .card {
+  height: 80vh;
+  border-radius: 10px;
+  margin: 10px;
+  background-size: cover;
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+section .card h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #fff;
+  text-shadow: 5px 5px 10px #111;
+  padding: 10px 20px;
+  opacity: 0;
+  font-size: 30px;
+}
+.card.active {
+  flex: 6;
+}
+.card.active h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
