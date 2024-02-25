@@ -64,5 +64,5 @@ section .card h2 {
 }
 .card.active h2 {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in 0.4s;
 }
